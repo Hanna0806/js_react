@@ -1,0 +1,95 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background-color: gray;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container_wrapper {
+    background-color: violet;
+    width: 1000px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.section-add {
+    width: 700px;
+    height: 100px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 5px;
+}
+
+.section-add__input {
+    border: 2px solid violet;
+    width: 500px;
+    height: 50px;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.section-add__button {
+    background-color: violet;
+    border: 0;
+    width: 80px;
+    height: 55px;
+    border-radius: 5px;
+    color: white;
+}
+
+.section-list {
+    /* width: 700px;
+    height: 100px;
+    background-color: white;
+    border-radius: 5px; */
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.section-list__item {
+    position: relative;
+    width: 700px;
+    height: 110px;
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.section-list__button-remove {
+    background-color: violet;
+    border: 0;
+    width: 50px;
+    height: 55px;
+    border-radius: 5px;
+    color: white;
+}
+
+.section-list__text {
+    width: 400px;
+}
+
+.line {
+    width: 600px;
+    border-bottom: 2px solid rgb(189, 179, 179);
+    align-self: end;
+    position: absolute;
+    margin: 10px;
+}
