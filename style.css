@@ -6,22 +6,24 @@
 
 .container {
     background-color: gray;
-    width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 64px;
 }
 
 .container_wrapper {
     background-color: violet;
-    width: 1000px;
-    height: 600px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 20px;
+    flex-grow: 1;
+    align-self: stretch;
+    padding: 24px;
+    border-radius: 8px;
 }
 
 .section-add {
