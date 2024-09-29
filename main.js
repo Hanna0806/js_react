@@ -1,31 +1,30 @@
 const buttonAdd = document.querySelector('.section-add__button');
-console.log(buttonAdd);
-const itemElem = document.querySelector('.section-list__item');
 const listContainer = document.querySelector('.section-list');
+const input = document.querySelector('.section-add__input');
 
+let counter = 0;
 
-const input = document.querySelector('.section-add__input')
+function addToDo() {
+    if (input.value === '') return;   // если ничего не введено
 
-// console.log(itemElem);
-const buttonDelete = document.querySelector('.section-list__button-remove')
-
-
-
-function addList () {
-    const title = input.value
-    console.log(title);
+    const title = input.value;
     const liItem = `<li class="section-list__item">
-    <h2 class="section-list__text">${title}</h2>
-    <button class="section-list__button-remove">Delete</button>
-    <div class="line"></div>
-</li>`
-listContainer.insertAdjacentHTML('afterbegin', liItem)
-}
-buttonAdd.addEventListener('click', addList)
+        <h2 class="section-list__text">${title}</h2>
+        <button class="section-list__button-remove" id="btn-remove${counter}">Delete</button>
+        <div class="line"></div>
+    </li>`;
 
-function deleteList(e) {
-    if(e.target.classlist.contains('.section-list__button-remove')) {
-        liItem.remove()
-    }
+    listContainer.insertAdjacentHTML('afterbegin', liItem)
+    input.value = '';    // сбрасываем input
+    input.focus();
+
+    const buttonDelete = document.querySelector(`#btn-remove${counter}`)
+    buttonDelete.addEventListener('click', (e) => {
+        const toDo = e.target.closest(".section-list__item");
+        toDo.remove();
+    })
+
+    counter++;
 }
-buttonDelete.addEventListener('click', deleteList)
+
+buttonAdd.addEventListener('click', addToDo)

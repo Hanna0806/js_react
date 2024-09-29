@@ -47,7 +47,7 @@
     background-color: violet;
     border: 0;
     width: 80px;
-    height: 55px;
+    height: 52px;
     border-radius: 5px;
     color: white;
 }
@@ -92,4 +92,110 @@
     align-self: end;
     position: absolute;
     margin: 10px;
+}
+
+@media (max-width: 990px) {
+    .section-add {
+        width: 600px;
+        height: 100px;
+        background-color: red;
+    }
+    .section-add__button {
+        width: 60px;
+        height: 50px;
+    }
+    .section-list {
+             gap: 30px;
+    }
+    .section-list__item {
+        width: 600px;
+        height: 80px;
+    }
+    .section-list__button-remove {
+        width: 55px;
+        height: 50px;
+    }
+    .line {
+        width: 560px;
+        margin: 7px;
+    }
+}
+@media (max-width: 700px) {
+    .section-add {
+        width: 500px;
+        height: 80px;
+        background-color: black;
+    }
+    .section-add__input {
+        /* border: 2px solid violet; */
+        width: 400px;
+        height: 50px;
+    }
+    .section-add__button {
+        width: 55px;
+    }
+    .section-list__item {
+        width: 500px;
+        height: 70px;
+    }
+    .line {
+        width: 470px;
+        margin: 6px;
+    }
+    .section-list__button-remove {
+        width: 55px;
+        height: 45px;
+        margin: 6px;
+    }
+}
+@media (max-width: 520px) {
+    .section-add {
+        width: 450px;
+        height: 100px;
+        background-color: blue;
+    }
+    .section-add__input {
+        width: 350px;
+    }
+    .section-add__button {
+        width: 45px;
+    }
+    .section-list {
+        gap: 20px;
+    }
+    .section-list__item {
+        width: 450px;
+        height: 75px;
+    }
+    .line {
+        width: 440px;
+        margin: 8px;
+    }
+}
+@media (max-width: 444px) {
+    .section-add {
+        width: 400px;
+        height: 100px;
+        background-color: green;
+    }
+    .section-add__input {
+        width: 300px;
+    }
+    .section-add__button {
+        width: 45px;
+        height: 50px;
+    }
+    .section-list__item {
+        width: 400px;
+        height: 65px;
+    }
+    .line {
+        width: 390px;
+        margin: 5px;
+    }
+    .section-list__button-remove {
+        width: 50px;
+        height: 45px;
+        margin: 5px;
+    }
 }
